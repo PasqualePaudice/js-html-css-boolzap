@@ -7,6 +7,10 @@
 
 }
 
+.template{
+    display: none;
+}
+
 body{
 
     background-color:  #D9DBD6;
@@ -164,6 +168,7 @@ body{
     width: 70%;
     height: 100%;
     position: relative;
+    overflow-y: scroll;
 
 }
 
@@ -271,12 +276,14 @@ main{
     width: 100%;
     background: url('https://media.cdnandroid.com/5c/01/2d/95/60/imagen-whatsapp-wallpaper-4gal.jpg');
     background-position: center;
+    overflow: hidden;
+    overflow-y: scroll;
 
 }
 
 /*Messaggi*/
 .messaggio{
-    margin-top: 10px;
+    margin: 10px;
     max-width: 20%;
     padding: 10px;
     border-radius: 8px;
