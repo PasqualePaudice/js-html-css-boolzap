@@ -74,6 +74,7 @@ body{
 .casella-ricerca input{
     border: 0px;
     width:85%;
+    height:80%;
 }
 
 
@@ -81,6 +82,7 @@ body{
     display: inline-block;
     color: grey;
     font-size: 10px;
+    margin: 0 15px;
 }
 
 /*Anteprima chat*/
@@ -157,8 +159,7 @@ body{
 /*MAIN*/
 
 .main{
-    background: url('https://media.cdnandroid.com/5c/01/2d/95/60/imagen-whatsapp-wallpaper-4gal.jpg');
-    background-position: center;
+
     float: left;
     width: 70%;
     height: 100%;
@@ -171,6 +172,7 @@ header{
     height:50px;
     background-color: #EDEDED;
     box-shadow: 0px 3px 5px 0px lightgrey;
+    z-index: 2;
 
 
 }
@@ -178,11 +180,134 @@ header{
 .barra-mess{
 
     position: absolute;
-    height:62px;
+    height:10%;
     width: 100%;
     background-color: white;
     bottom: 0;
     background: #F0F0F0;
+    display: flex;
+    align-items: center;
 
 
+}
+
+.smile{
+    width:8%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.barra-mess .smile .fa-smile{
+    color:#959B9D;
+    font-size: 25px;
+}
+
+.scrivi-messaggio{
+    width: 85%;
+    height: 80%;
+    background: white;
+    float: left;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+}
+
+
+.scrivi-messaggio input{
+    height: 80%;
+    margin-left: 20px;
+    border:0;
+    width: 90%;
+}
+
+.mic{
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:7%;
+
+
+}
+
+.button{
+    border:0;
+    float: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:7%;
+    display: none;
+    background-color: #EDEDED;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+
+
+.fa-paper-plane{
+    color:#959B9D;
+    font-size: 25px;
+}
+
+
+.mic .fa-microphone{
+    color:#959B9D;
+    font-size: 25px;
+}
+
+
+/*MAIN MAIN*/
+
+main{
+    height: 83%;
+    width: 100%;
+    background: url('https://media.cdnandroid.com/5c/01/2d/95/60/imagen-whatsapp-wallpaper-4gal.jpg');
+    background-position: center;
+
+}
+
+/*Messaggi*/
+.messaggio{
+    margin-top: 10px;
+    max-width: 20%;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
+    color: #8B8B8B;
+}
+
+
+.ricevuto{
+    float: left;
+    clear: both;
+    margin-left: 10%;
+    background: #FFFFFF;
+}
+
+.mandato{
+    float: right;
+    clear: both;
+    margin-right: 10%;
+    background-color: #dcf8c6;
+}
+
+
+
+
+/*visible/invisible*/
+
+.invisible{
+ display: none;
+}
+
+.visible{
+    display: block;
 }
