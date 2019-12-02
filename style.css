@@ -20,6 +20,9 @@ body{
 
 }
 
+
+
+
 .barra-sopra{
     background-color: #009688 ;
     height: 100px;
@@ -46,16 +49,86 @@ body{
     float: left;
 }
 
+/*barra sopra/ profilo personale*/
+
 .top-sidebar{
     height:50px;
     background-color: #EDEDED;
     border-right: 0.5px solid lightgrey;
 }
 
-.notifiche{
-    height: 100px;
-    background: #9DE1FE;
+
+
+
+.profilo-personale{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    float: left;
+
+
 }
+
+.profilo-personale div{
+    border-radius: 100%;
+    width: 60%;
+    height: 90%;
+    background: url('https://thumbs.dreamstime.com/z/persona-casuale-del-ritratto-maschio-dell-avatar-dell-icona-di-profilo-46846328.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+
+}
+
+.top-icons{
+    justify-content: flex-end;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+}
+
+.top-icons i{
+    margin-right: 10px;
+    color: grey;
+}
+
+
+/*NOTIFICHE*/
+.notifiche{
+
+    height: 60px;
+    background: #9DE1FE;
+
+}
+
+.notifiche .anteprima-chat{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.notifiche strong{
+    font-size: 12px;
+}
+
+.notifiche a{
+    color: grey;
+}
+
+.notifiche .foto-profilo{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9DE1FE;
+}
+
+
 
 .ricerca{
 
@@ -99,7 +172,7 @@ body{
 
 .tutte_chat{
     overflow-y: scroll;
-    height: 496px;
+    height: 536px;
 }
 
 .anteprima-chat{
