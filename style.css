@@ -6,6 +6,9 @@
     font-family: sans-serif;
 
 }
+input:focus, button:focus{
+    outline: none;
+}
 
 .template{
     display: none;
@@ -72,6 +75,7 @@ body{
     width: 90%;
     height: 90%;
     padding: 5px 10px;
+    display: flex;
     align-items: center;
 }
 
@@ -83,7 +87,9 @@ body{
 
 
 .cerca{
-    display: inline-block;
+    height:80%;
+    display: flex;
+    align-items: center;
     color: grey;
     font-size: 10px;
     margin: 0 15px;

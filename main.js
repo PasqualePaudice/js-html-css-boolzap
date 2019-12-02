@@ -43,7 +43,7 @@ $(document).ready(function(){
         $('.mic').removeClass('invisible');
         $('.button').removeClass('visible');
 
-        
+
 
 
     })
