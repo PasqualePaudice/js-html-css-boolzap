@@ -43,6 +43,16 @@ $(document).ready(function(){
         $('.mic').removeClass('invisible');
         $('.button').removeClass('visible');
 
+        setTimeout(function(){
+
+        var messaggioRicevuto = $('.messaggio.ricevuto:first-child').clone();
+
+        messaggioRicevuto.appendTo('main').html('ok');
+
+
+        },1000);
+
+
 
 
 
