@@ -168,6 +168,10 @@ body{
     margin: 0 15px;
 }
 
+.cerca:hover{
+    cursor: pointer;
+}
+
 /*Anteprima chat*/
 
 .tutte_chat{
@@ -177,6 +181,18 @@ body{
 
 .anteprima-chat{
     padding: 10px;
+}
+
+.tutte_chat .anteprima-chat{
+padding: 10px 10px 0 10px;
+margin-top: 10px;
+}
+
+.tutte_chat .anteprima-chat:hover{
+
+    cursor: pointer;
+    background: #EDEDED;
+
 }
 
 .chat{
@@ -396,4 +412,8 @@ main{
 
 .visible{
     display: block;
+}
+
+.chat.invisible , .chat.visible{
+     align-self :
 }

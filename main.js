@@ -43,6 +43,8 @@ $(document).ready(function(){
         $('.mic').removeClass('invisible');
         $('.button').removeClass('visible');
 
+
+        //funzione che permette di ricevere il messaggio "ok" dopo il nostro invio
         setTimeout(function(){
 
         var messaggioRicevuto = $('.messaggio.ricevuto:first-child').clone();
@@ -51,6 +53,42 @@ $(document).ready(function(){
 
 
         },1000);
+
+
+
+
+    });
+
+
+
+    $('.casella-ricerca .cerca').click(function(){
+
+
+
+        var nome_cercato = $('.casella-ricerca input').val();
+
+
+        var nome_da_cercare = $(' .tutte_chat .nome strong');
+
+        nome_da_cercare.each(function(){
+
+            nome_singolo = $(this).text();
+
+            if (nome_cercato.toLowerCase() == nome_singolo.toLowerCase()){
+                $(this).closest('.anteprima-chat').addClass('visible');
+                $(this).closest('.anteprima-chat').removeClass('invisible');
+                console.log('si');
+
+
+            }else{
+                $(this).closest('.anteprima-chat').addClass('invisible');
+                $(this).closest('.anteprima-chat').removeClass('visible');
+
+                console.log('no');
+
+            }
+
+        })
 
 
 
