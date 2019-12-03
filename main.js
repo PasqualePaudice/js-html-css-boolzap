@@ -57,11 +57,82 @@ $(document).ready(function(){
 
 
 
+    }
+);
+
+    $(".scrivi-messaggio").keypress(function(e) {
+
+    if(e.which == 13) {
+        scrivi_messaggio();
+    }
+
     });
 
 
 
-    $('.casella-ricerca .cerca').click(function(){
+    $('.casella-ricerca .cerca').click(ricerca());
+
+
+    $(".ricerca ").keypress(function(e) {
+
+    if(e.which == 13) {
+        ricerca ();
+    }
+
+    });
+
+
+
+
+
+
+
+
+    function scrivi_messaggio(){
+
+
+        var messaggio_inviato = $('.scrivi-messaggio input').val();
+
+        var messaggio = $('.messaggio.template').clone();
+
+        messaggio.removeClass('template').addClass('mandato');
+
+        messaggio.children('.testo-messaggio').text(messaggio_inviato);
+
+        $('main').append(messaggio);
+
+        $('.scrivi-messaggio input').val('');
+
+        $('.mic').removeClass('invisible');
+        $('.button').removeClass('visible');
+
+
+        //funzione che permette di ricevere il messaggio "ok" dopo il nostro invio
+        setTimeout(function(){
+
+        var messaggioRicevuto = $('.messaggio.ricevuto:first-child').clone();
+
+        messaggioRicevuto.appendTo('main').html('ok');
+
+
+        },1000);
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+// Funzione di ricerca dei contatti
+    function ricerca(){
 
 
 
@@ -73,6 +144,8 @@ $(document).ready(function(){
         nome_da_cercare.each(function(){
 
             nome_singolo = $(this).text();
+
+            if(nome_cercato.toLowerCase() != 0){
 
             if (nome_cercato.toLowerCase() == nome_singolo.toLowerCase()){
                 $(this).closest('.anteprima-chat').addClass('visible');
@@ -86,6 +159,9 @@ $(document).ready(function(){
 
                 console.log('no');
 
+            }}else{
+                $(this).closest('.anteprima-chat').addClass('visible');
+                $(this).closest('.anteprima-chat').removeClass('invisible');
             }
 
         })
@@ -94,7 +170,7 @@ $(document).ready(function(){
 
 
 
-    })
+    }
 
 
 

@@ -82,9 +82,8 @@ body{
 
 }
 
-.top-icons{
-    justify-content: flex-end;
-    float: left;
+.top-icons, .icone-correnti{
+    /*float: left;*/
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -92,8 +91,9 @@ body{
     width: 80%;
 }
 
-.top-icons i{
-    margin-right: 10px;
+.top-icons i , .icone-correnti i{
+    font-size: 20px;
+    margin-right: 30px;
     color: grey;
 }
 
@@ -176,7 +176,7 @@ body{
 
 .tutte_chat{
     overflow-y: scroll;
-    height: 536px;
+    height: calc(100% - 60px - 50px - 40px);
 }
 
 .anteprima-chat{
@@ -184,8 +184,8 @@ body{
 }
 
 .tutte_chat .anteprima-chat{
-padding: 10px 10px 0 10px;
-margin-top: 10px;
+padding: 15px 10px 0 15px;
+/*margin-top: 10px;*/
 }
 
 .tutte_chat .anteprima-chat:hover{
@@ -199,7 +199,7 @@ margin-top: 10px;
     height:50px;
 }
 
-.div-foto-profilo{
+.div-foto-profilo , .foto-corrente {
     width:25%;
     height: 100%;
     float: left;
@@ -207,7 +207,12 @@ margin-top: 10px;
     justify-content: center;
 }
 
-.foto-profilo{
+.foto-corrente{
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.foto-profilo , .foto-corrente-in{
     border-radius: 100%;
     width:45px;
     height:45px;
@@ -216,7 +221,14 @@ margin-top: 10px;
     position: relative;
 }
 
-.foto-profilo img{
+.foto-corrente-in{
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-profilo img, .foto-corrente-in img{
     width: 110%;
     height: 110%;
     position: absolute;
@@ -231,7 +243,7 @@ margin-top: 10px;
     width: 65%;
     float: right;
     margin-right: 10px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #EDEDED;
     padding: 5px;
 
 }
@@ -263,7 +275,6 @@ margin-top: 10px;
     width: 70%;
     height: 100%;
     position: relative;
-    overflow-y: scroll;
 
 }
 
@@ -273,6 +284,8 @@ header{
     background-color: #EDEDED;
     box-shadow: 0px 3px 5px 0px lightgrey;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
 
 
 }
@@ -369,7 +382,7 @@ header{
 main{
     height: 83%;
     width: 100%;
-    background: url('https://media.cdnandroid.com/5c/01/2d/95/60/imagen-whatsapp-wallpaper-4gal.jpg');
+    background: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
     background-position: center;
     overflow: hidden;
     overflow-y: scroll;
@@ -402,6 +415,11 @@ main{
 }
 
 
+/*icone main corrente*/
+
+.icone-correnti{
+    padding-right: 10px;
+}
 
 
 /*visible/invisible*/
