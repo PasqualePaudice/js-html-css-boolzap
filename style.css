@@ -6,6 +6,27 @@
     font-family: sans-serif;
 
 }
+
+.info-utente{
+    margin-left: 10px;
+}
+
+.head-name{
+    height: 45%;
+}
+
+.ultimo-accesso{
+    display: flex;
+    align-items: flex-start;
+    height: 55%;
+
+}
+
+small{
+    color: grey;
+    font-size: 10px;
+}
+
 input:focus, button:focus{
     outline: none;
 }
@@ -88,7 +109,7 @@ body{
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-    width: 80%;
+    width: 75%;
 }
 
 .top-icons i , .icone-correnti i{
@@ -379,10 +400,11 @@ header{
 
 /*MAIN MAIN*/
 
-main{
+.schermata-messaggi{
     height: 83%;
     width: 100%;
     background: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+
     background-position: center;
     overflow: hidden;
     overflow-y: scroll;

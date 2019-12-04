@@ -6,9 +6,7 @@ $(document).ready(function(){
 
     messaggio.children('.testo-messaggio').text('ciao');
 
-    $('main').append(messaggio);
-
-
+    $('.schermata-messaggi').append(messaggio);
 
 
 
@@ -28,7 +26,7 @@ $(document).ready(function(){
     $('.button').click(function(){
 
 
-        var messaggio_inviato = $('.scrivi-messaggio input').val();
+        var messaggio_inviato = $('.main.visible .messaggio-da-inviare').val();
 
         var messaggio = $('.messaggio.template').clone();
 
@@ -36,9 +34,10 @@ $(document).ready(function(){
 
         messaggio.children('.testo-messaggio').text(messaggio_inviato);
 
-        $('main').append(messaggio);
+        $('.main.visible .schermata-messaggi').append(messaggio);
 
-        $('.scrivi-messaggio input').val('');
+
+        $('.messaggio-da-inviare').val('');
 
         $('.mic').removeClass('invisible');
         $('.button').removeClass('visible');
@@ -49,7 +48,7 @@ $(document).ready(function(){
 
         var messaggioRicevuto = $('.messaggio.ricevuto:first-child').clone();
 
-        messaggioRicevuto.appendTo('main').html('ok');
+        messaggioRicevuto.appendTo('.main.visible .schermata-messaggi').html('ok');
 
 
         },1000);
@@ -82,6 +81,25 @@ $(document).ready(function(){
     });
 
 
+    $('.anteprima-chat').click(function(){
+
+        $('.main').removeClass('visible');
+        $('.main').addClass('invisible');
+
+        var nome = $(this ).find('strong').text();
+
+        $('.main[data-codice="' + nome + '"] .head-name h3').text(nome)
+
+
+        $('.main[data-codice="' + nome + '"]').removeClass('invisible');
+        $('.main[data-codice="' + nome + '"]').addClass('visible');
+
+
+
+
+    })
+
+
 
 
 
@@ -90,8 +108,7 @@ $(document).ready(function(){
 
     function scrivi_messaggio(){
 
-
-        var messaggio_inviato = $('.scrivi-messaggio input').val();
+        var messaggio_inviato = $('.main.visible .messaggio-da-inviare').val();
 
         var messaggio = $('.messaggio.template').clone();
 
@@ -99,9 +116,10 @@ $(document).ready(function(){
 
         messaggio.children('.testo-messaggio').text(messaggio_inviato);
 
-        $('main').append(messaggio);
+        $('.main.visible .schermata-messaggi').append(messaggio);
 
-        $('.scrivi-messaggio input').val('');
+
+        $('.messaggio-da-inviare').val('');
 
         $('.mic').removeClass('invisible');
         $('.button').removeClass('visible');
@@ -112,7 +130,7 @@ $(document).ready(function(){
 
         var messaggioRicevuto = $('.messaggio.ricevuto:first-child').clone();
 
-        messaggioRicevuto.appendTo('main').html('ok');
+        messaggioRicevuto.appendTo('.main.visible .schermata-messaggi').html('ok');
 
 
         },1000);
@@ -120,7 +138,7 @@ $(document).ready(function(){
 
 
 
-    }
+        }
 
 
 
