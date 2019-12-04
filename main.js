@@ -145,11 +145,14 @@ $(document).ready(function(){
 
             nome_singolo = $(this).text();
 
+
             if(nome_cercato.toLowerCase() != 0){
 
-            if (nome_cercato.toLowerCase() == nome_singolo.toLowerCase()){
+            if (nome_cercato.toLowerCase() == nome_singolo.toLowerCase() || nome_singolo.toLowerCase().includes(nome_cercato.toLowerCase())){
+
                 $(this).closest('.anteprima-chat').addClass('visible');
                 $(this).closest('.anteprima-chat').removeClass('invisible');
+
                 console.log('si');
 
 
