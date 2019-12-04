@@ -419,6 +419,8 @@ header{
     border-radius: 8px;
     box-shadow: 0 1px 0.5px rgba(0,0,0,.13);
     color: #8B8B8B;
+    position: relative;
+
 }
 
 
@@ -442,6 +444,63 @@ header{
 .icone-correnti{
     padding-right: 10px;
 }
+
+/*freccia delete*/
+.delete{
+    position: absolute;
+    right: 0px;
+    top:50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width:15px;
+    display: flex;
+    align-items: center;
+    background-color: #DCF8C6;
+    box-shadow: -9px -5px 20px 1px rgba(220,248,198,1);
+    display: none;
+
+}
+
+.delete:hover{
+    cursor: pointer;
+}
+
+.messaggio:hover .delete{
+    display: block;
+}
+
+.delete .fa-chevron-down{
+    margin:auto;
+    font-size: 15px;
+}
+
+.finestra-delete{
+    background: white;
+    position: absolute;
+    padding:15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 15%;
+    transform: translateX(+50%);
+}
+
+.finestra-delete span{
+    width: 100%;
+    padding: 10px;
+}
+
+.finestra-delete span:hover{
+    background: #EDEDED;
+}
+
+
+.iniziale{
+    background-image: URL('https://whatsappbrand.com/wp-content/themes/whatsapp-brc/images/WhatsApp_Logo_1.png');
+
+    background-position: center;
+}
+
 
 
 /*visible/invisible*/

@@ -10,6 +10,25 @@ $(document).ready(function(){
 
 
 
+    $(document).on('click', '.delete',function(){
+
+        $('.finestra-delete').removeClass('invisible');
+        $('.finestra-delete').addClass('visible');
+
+
+
+    });
+
+    $(document).on('mouseleave','.finestra-delete', function(){
+        $('.finestra-delete').removeClass('visible');
+        $('.finestra-delete').addClass('invisible');
+    })
+
+    $(document).on('click','.finestra-delete span', function(){
+        $(this).closest('.messaggio').addClass('invisible');
+    });
+
+
 
 
 
@@ -57,11 +76,11 @@ $(document).ready(function(){
 
 
     }
-);
+    );
 
     $(".scrivi-messaggio").keypress(function(e) {
 
-    if(e.which == 13) {
+        if(e.which == 13) {
         scrivi_messaggio();
     }
 
@@ -74,9 +93,9 @@ $(document).ready(function(){
 
     $(".ricerca ").keypress(function(e) {
 
-    if(e.which == 13) {
-        ricerca ();
-    }
+        if(e.which == 13) {
+            ricerca ();
+        }
 
     });
 
@@ -138,7 +157,7 @@ $(document).ready(function(){
 
 
 
-        }
+    }
 
 
 
