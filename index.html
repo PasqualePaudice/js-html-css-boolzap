@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="main.js" charset="utf-8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     </head>
     <body>
 
@@ -83,7 +84,7 @@
                 </div>
 
                 <div class="tutte_chat">
-                    <div class="anteprima-chat c antonio">
+                    <!-- <div class="anteprima-chat c antonio">
                             <div class="chat">
 
                                 <div class="div-foto-profilo">
@@ -105,9 +106,9 @@
 
                             </div>
 
-                    </div>
+                    </div> -->
 
-                    <div class="anteprima-chat  giuseppe">
+                    <!-- <div class="anteprima-chat  giuseppe">
                             <div class="chat">
 
                                 <div class="div-foto-profilo">
@@ -223,8 +224,35 @@
 
                             </div>
 
-                        </div>
+                        </div> -->
 
+                        <script id="template-saluto" type="text/x-handlebars-template">
+
+                            <div class="anteprima-chat {{nome}}">
+                                    <div class="chat">
+
+                                        <div class="div-foto-profilo">
+                                            <div class="foto-profilo">
+                                                <img src=" {{ fotoProfilo }} " alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="nome_mess">
+                                            <div class="nome">
+                                                <strong>{{nome}}</strong>
+                                            </div>
+
+                                            <div class="mess">
+                                                <p> {{ messaggio }} </p>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                            </div>
+
+                        </script>
                 </div>
 
 
@@ -273,7 +301,7 @@
 
                     <div class="schermata-messaggi ">
 
-                        
+
 
 
 

@@ -1,5 +1,62 @@
 $(document).ready(function(){
 
+    var Antonio = {
+        "nome" : "Antonio",
+        "fotoProfilo": `https://messaggimania.it/wp-content/uploads/2015/05/immagine-profilo-whatsapp-7-300x300.jpg` ,
+        "messaggio": "hey"
+    };
+    var Giuseppe = {
+        "nome" : "Giuseppe",
+        "fotoProfilo": `https://messaggimania.it/wp-content/uploads/2015/05/immagine-profilo-whatsapp-11-300x300.jpg` ,
+        "messaggio": "hey oh"
+    };
+
+    var Maria = {
+
+        "nome" : "Maria",
+        "fotoProfilo": `https://st3.depositphotos.com/1077687/12776/v/950/depositphotos_127761180-stock-illustration-avatar-woman-profile-cartoon.jpg` ,
+        "messaggio": "Ciao"
+
+    };
+    var Mario = {
+
+        "nome" : "Mario",
+        "fotoProfilo": `https://st.depositphotos.com/1742172/1628/v/950/depositphotos_16286871-stock-illustration-side-profile-cartoon.jpg` ,
+        "messaggio": "Ciao"
+
+    };
+    var Anna = {
+
+        "nome" : "Anna",
+        "fotoProfilo": `https://c8.alamy.com/compit/k5td3x/winking-femmina-emozione-icona-profilo-donna-cartoon-ritratto-felice-volto-sorridente-k5td3x.jpg` ,
+        "messaggio":"Ciao"
+
+    };
+    var Luigi= {
+
+        "nome" : "Luigi",
+        "fotoProfilo": `https://viralpop.it/wp-content/uploads/2018/08/icona-cane.jpg` ,
+        "messaggio":"Ciao"
+
+    };
+
+
+    var template_html = $('#template-saluto').html();
+    var template_function = Handlebars.compile(template_html);
+
+    var oggetti = [Antonio , Giuseppe, Maria, Mario, Anna, Luigi];
+
+    for (var i = 0; i < oggetti.length; i++) {
+
+
+    $('.tutte_chat').append(template_function(oggetti[i]));
+    }
+
+
+
+
+
+
 
     var messaggio1 = $('.messaggio.template').clone();
 
@@ -104,9 +161,12 @@ $(document).ready(function(){
         $('.main').removeClass('visible');
         $('.main').addClass('invisible');
 
-        var nome = $(this ).find('strong').text();
+        var nome = $(this).find('strong').text();
 
-        $('.main[data-codice="' + nome + '"] .head-name h3').text(nome)
+        console.log(nome);
+
+        $('.main[data-codice="' + nome + '"] .head-name h3').text(nome);
+
 
 
         $('.main[data-codice="' + nome + '"]').removeClass('invisible');
